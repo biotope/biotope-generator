@@ -1,0 +1,8 @@
+{
+  "name": "@biotop/biotope-generator",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "plop": "^2.0.0"
+  }
+}
