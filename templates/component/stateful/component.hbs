@@ -3,8 +3,10 @@ import {BiotopeReduxStoreConnector} from "../../resources/ts/core/BiotopeReduxSt
 import {{properCase name}}ReducerCreator from './{{properCase name}}.reducer';
 import { {{properCase name}}State } from './{{properCase name}}.state';
 
+import './{{pascalCase name}}.styles.scss';
+
 export class {{properCase name}} extends HTMLElement {
-	static componentName = '{{dashCase name}}-component';
+	static componentName = '{{component (dashCase name)}}';
 	private html: any;
 	private uid: string;
 	private storeConnector: BiotopeReduxStoreConnector<{{properCase name}}State>;
