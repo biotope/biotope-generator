@@ -22,7 +22,13 @@ export class {{properCase name}} extends HTMLElement {
 			triggerOnStateChange: (state: {{properCase name}}State, lastState: {{properCase name}}State) => {}
 		});
 		this.uid = this.storeConnector.getComponentId();
+
+    this.render(this.storeConnector.getState());
 	}
+
+  render(state: {{properCase name}}State) {
+    return this.html`{{properCase name}}`;
+  }
 }
 if (!customElements.get({{properCase name}}.componentName)) {
 	customElements.define({{properCase name}}.componentName, {{properCase name}});
