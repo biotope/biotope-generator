@@ -1,9 +1,9 @@
 import {Reducer} from 'redux';
 import {ComponentAction} from '../../resources/ts/state/ComponentAction';
-import {createInitial{{properCase name}}State, {{properCase name}}State} from "./{{properCase name}}.state";
+import {createInitial{{pascalCase name}}State, {{pascalCase name}}State} from "./{{pascalCase name}}.state";
 
 const reducerCreator: (componentId: string) => Reducer = (componentId: string) =>
-	(state: {{properCase name}}State = createInitial{{properCase name}}State(), action: ComponentAction): {{properCase name}}State => {
+	(state: {{pascalCase name}}State = createInitial{{pascalCase name}}State(), action: ComponentAction): {{pascalCase name}}State => {
 		if (action.id == componentId) {
 			switch (action.type) {
 				default:
