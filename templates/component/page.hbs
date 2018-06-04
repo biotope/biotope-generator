@@ -2,7 +2,7 @@
 # These values are used for creating the index
 # It is also possible to use these inside the partials via \{{ data.frontMatter.[your property] }}
 
-title: {{name}} Web Component
+title: {{pascalCase name}} Web Component
 description: {{description}}
 
 ---
@@ -13,5 +13,5 @@ description: {{description}}
 --}}
 
 \{{> layouts/layout.default
-	contentMain="components/{{name}}/scaffolding/demo"
+	contentMain="components/{{pascalCase name}}/scaffolding/demo"
 }}

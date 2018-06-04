@@ -1,15 +1,15 @@
 import {hyper} from 'hyperhtml/esm';
 import {BiotopeReduxStoreConnector} from "../../resources/ts/core/BiotopeReduxStoreConnector";
-import {{properCase name}}ReducerCreator from './{{properCase name}}.reducer';
-import { {{properCase name}}State } from './{{properCase name}}.state';
+import {{pascalCase name}}ReducerCreator from './{{pascalCase name}}.reducer';
+import { {{pascalCase name}}State } from './{{pascalCase name}}.state';
 
 import './{{pascalCase name}}.styles.scss';
 
-export class {{properCase name}} extends HTMLElement {
+export class {{pascalCase name}} extends HTMLElement {
 	static componentName = '{{component (dashCase name)}}';
 	private html: any;
 	private uid: string;
-	private storeConnector: BiotopeReduxStoreConnector<{{properCase name}}State>;
+	private storeConnector: BiotopeReduxStoreConnector<{{pascalCase name}}State>;
 
 	constructor() {
 		super();
@@ -17,15 +17,15 @@ export class {{properCase name}} extends HTMLElement {
 	}
 
 	connectedCallback() {
-		this.storeConnector = new BiotopeReduxStoreConnector<{{properCase name}}State>({
+		this.storeConnector = new BiotopeReduxStoreConnector<{{pascalCase name}}State>({
 			store: window['biotope'].store,
 			componentId: this.uid,
-			reducerCreator: {{properCase name}}ReducerCreator,
-			triggerOnStateChange: (state: {{properCase name}}State, lastState: {{properCase name}}State) => {}
+			reducerCreator: {{pascalCase name}}ReducerCreator,
+			triggerOnStateChange: (state: {{pascalCase name}}State, lastState: {{pascalCase name}}State) => {}
 		});
 		this.uid = this.storeConnector.getComponentId();
 	}
 }
-if (!customElements.get({{properCase name}}.componentName)) {
-	customElements.define({{properCase name}}.componentName, {{properCase name}});
+if (!customElements.get({{pascalCase name}}.componentName)) {
+	customElements.define({{pascalCase name}}.componentName, {{pascalCase name}});
 }
