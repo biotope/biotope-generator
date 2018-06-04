@@ -16,31 +16,31 @@ module.exports = function (plop) {
 		actions: [
 			{
 				type: 'add',
-				path: 'src/components/{{name}}/{{name}}.ts',
+				path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.ts',
 				templateFile: __dirname + '/templates/component/stateful/component.hbs',
 				skipIfExists: true
 			},
 			{
 				type: 'add',
-				path: 'src/components/{{name}}/{{name}}.reducer.ts',
+				path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.reducer.ts',
 				templateFile: __dirname + '/templates/component/stateful/reducer.hbs',
 				skipIfExists: true
 			},
 			{
 				type: 'add',
-				path: 'src/components/{{name}}/{{name}}.actions.ts',
+				path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.actions.ts',
 				templateFile: __dirname + '/templates/component/stateful/actions.hbs',
 				skipIfExists: true
 			},
 			{
 				type: 'add',
-				path: 'src/components/{{name}}/{{name}}.state.ts',
+				path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.state.ts',
 				templateFile: __dirname + '/templates/component/stateful/state.hbs',
 				skipIfExists: true
 			},
 			{
 				type: 'add',
-				path: 'src/components/{{name}}/scaffolding/demo.hbs',
+				path: 'src/components/{{pascalCase name}}/scaffolding/demo.hbs',
 				templateFile: __dirname + '/templates/component/stateful/scaffolding/demo.hbs',
 				skipIfExists: true
 			},
