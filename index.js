@@ -1,4 +1,8 @@
 module.exports = function (plop) {
+	plop.setHelper('component', function (text) {
+		return text + '-component';
+	});
+
 	plop.setGenerator('statefulComponent', {
 		description: 'a default biotope component',
 		prompts: [
@@ -42,6 +46,12 @@ module.exports = function (plop) {
 				type: 'add',
 				path: 'src/components/{{pascalCase name}}/scaffolding/demo.hbs',
 				templateFile: __dirname + '/templates/component/stateful/scaffolding/demo.hbs',
+				skipIfExists: true
+			},
+			{
+				type: 'add',
+				path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.styles.scss',
+				templateFile: __dirname + '/templates/component/stateful/styles.hbs',
 				skipIfExists: true
 			},
 			{
