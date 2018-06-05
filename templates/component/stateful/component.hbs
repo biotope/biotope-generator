@@ -24,7 +24,13 @@ export class {{pascalCase name}} extends HTMLElement {
 			triggerOnStateChange: (state: {{pascalCase name}}State, lastState: {{pascalCase name}}State) => {}
 		});
 		this.uid = this.storeConnector.getComponentId();
+
+    this.render(this.storeConnector.getState());
 	}
+
+  render(state: {{properCase name}}State) {
+    return this.html`{{properCase name}}`;
+  }
 }
 if (!customElements.get({{pascalCase name}}.componentName)) {
 	customElements.define({{pascalCase name}}.componentName, {{pascalCase name}});
