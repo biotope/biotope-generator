@@ -1,5 +1,5 @@
 ---
-to: app/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>/index.scss
+to: <%= path || 'src/components' %>/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>/index.scss
 ---
 @import "~@biotope/element/host.mixin";
 
