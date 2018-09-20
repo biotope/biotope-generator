@@ -1,5 +1,5 @@
 ---
-to: app/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>/index.ts
+to: <%= path || 'src/components' %>/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>/index.ts
 ---
 import Element from '@biotope/element';
 import template from './template';

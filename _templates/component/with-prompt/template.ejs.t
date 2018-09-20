@@ -1,5 +1,5 @@
 ---
-to: app/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>/template.ts
+to: <%= path || 'src/components' %>/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>/template.ts
 ---
 interface <%= h.inflection.transform(name, ['underscore', 'camelize']) %>TemplateData {
 
