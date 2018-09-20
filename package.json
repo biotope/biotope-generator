@@ -1,12 +1,11 @@
 {
   "name": "@biotope/generator",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "license": "MIT",
-  "scripts": {
-    "generate": "hygen component with-prompt"
-  },
+  "main": "index.js",
   "dependencies": {
-    "hygen": "^1.6.2"
+    "hygen": "^1.6.2",
+    "inquirer": "^6.2.0"
   },
   "repository": {
     "type": "git",
