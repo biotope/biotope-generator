@@ -7,7 +7,7 @@ interface <%= h.inflection.transform(name, ['underscore', 'camelize']) %>Templat
 
 export default (render: Function, data: <%= h.inflection.transform(name, ['underscore', 'camelize']) %>TemplateData) => {
     return render`
-        <style>${require('./style').toString()}</style>
+        <style>${require('./index').toString()}</style>
         <div>Fill me</div>
     `;
 }
