@@ -6,7 +6,8 @@
   "scripts": {
     "release": "np",
     "prepublishOnly": "npm run clean && npm install && npm run clean && yarn install",
-    "clean": "node_modules/.bin/rimraf node_modules"
+    "clean": "node_modules/.bin/rimraf node_modules",
+    "test": "echo \"No tests found\""
   },
   "dependencies": {
     "hygen": "^1.6.2",
