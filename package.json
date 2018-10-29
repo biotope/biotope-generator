@@ -4,7 +4,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "publish": "np",
+    "release": "np",
     "prepublishOnly": "npm run clean && npm install && npm run clean && yarn install",
     "clean": "node_modules/.bin/rimraf node_modules"
   },
