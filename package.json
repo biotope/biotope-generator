@@ -1,10 +1,10 @@
 {
   "name": "@biotope/generator",
-  "version": "2.1.0",
+  "version": "2.3.0",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "publish": "np",
+    "release": "np",
     "prepublishOnly": "npm run clean && npm install && npm run clean && yarn install",
     "clean": "node_modules/.bin/rimraf node_modules"
   },
