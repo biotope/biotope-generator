@@ -3,6 +3,6 @@ to: <%= path || 'src/components' %>/<%= h.inflection.transform(name, ['undersco
 ---
 @import "~@biotope/element/lib/host.mixin";
 
-@include host(<%= h.inflection.transform(name, ['underscore', 'dasherize']) %>) {
+@include host('<%= h.inflection.transform(name, ['underscore', 'dasherize']) %>') {
 
 }
