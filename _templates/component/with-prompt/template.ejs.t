@@ -1,7 +1,7 @@
 ---
 to: <%= path %>/<%= componentName %>/template.ts
 ---
-import styles from './styles.scss';
+import * as styles from './styles.scss';
 
 interface <%= componentName %>TemplateData {
 
