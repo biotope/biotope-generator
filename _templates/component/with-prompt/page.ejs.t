@@ -14,5 +14,5 @@ description: A simple demo of <%= componentName %>
 --}}
 
 {{> layouts/<%= locals.layout %>
-	contentMain="<%= `${path}/${componentName}/scaffolding/demo.hbs` %>"
+	contentMain="<%= `components/${componentName}/scaffolding/demo` %>"
 }}
