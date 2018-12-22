@@ -1,7 +1,6 @@
 ---
-to: <%= path || 'src/components' %>/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>/index.ts
+to: <%= path || 'src/components' %>/<%= componentName %>/index.ts
 ---
-<% var camelCaseName = h.inflection.transform(name, ['underscore', 'camelize']) %>
-import <%= camelCaseName %> from './<%= camelCaseName %>';
+import <%= componentName %> from './<%= componentName %>';
 
-<%= camelCaseName %>.register();
+<%= componentName %>.register();

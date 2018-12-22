@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "release": "np",
-    "prepublishOnly": "npm run clean && npm install && npm run clean && yarn install",
+    "prepublishOnly": "npm run clean && npm install",
     "clean": "node_modules/.bin/rimraf node_modules",
     "test": "echo \"No tests found\""
   },
   "dependencies": {
     "hygen": "^1.6.2",
+    "inflection": "^1.12.0",
     "inquirer": "^6.2.0"
   },
   "repository": {
@@ -18,8 +19,7 @@
     "url": "https://github.com/biotope/biotope-generator.git"
   },
   "engines": {
-    "node": ">=8.9.0",
-    "yarn": ">=1.4.0"
+    "node": ">=8.9.0"
   },
   "devDependencies": {
     "np": "^3.0.4",

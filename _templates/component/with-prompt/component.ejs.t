@@ -1,19 +1,18 @@
 ---
-to: <%= path || 'src/components' %>/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>/<%= h.inflection.transform(name, ['underscore', 'camelize']) %>.ts
+to: <%= path %>/<%= componentName %>/<%= componentName %>.ts
 ---
-<% var camelCaseName = h.inflection.transform(name, ['underscore', 'camelize']) %>
 import Component from '@biotope/element';
 import template from './template';
 
-interface <%= camelCaseName %>Props {
+interface <%= componentName %>Props {
 
 }
 
-interface <%= camelCaseName %>State {
+interface <%= componentName %>State {
 
 }
 
-class <%= camelCaseName %> extends Component< <%= camelCaseName %>Props, <%= camelCaseName %>State > {
+class <%= componentName %> extends Component< <%= componentName %>Props, <%= componentName %>State > {
     static componentName = '<%= h.inflection.transform(name, ['underscore', 'dasherize']) %>';
 
     render() {
@@ -21,4 +20,4 @@ class <%= camelCaseName %> extends Component< <%= camelCaseName %>Props, <%= cam
     }
 }
 
-export default <%= camelCaseName %>;
+export default <%= componentName %>;
