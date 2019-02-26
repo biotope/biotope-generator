@@ -1,7 +1,7 @@
 ---
 to: <%= path %>/<%= componentName %>/styles.scss
 ---
-@import "~@biotope/element/lib/host.mixin";
+@import "node_modules/@biotope/element/lib/host.mixin";
 
 @include host('<%= tagName %>') {
 
