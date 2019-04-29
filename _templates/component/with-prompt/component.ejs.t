@@ -3,7 +3,7 @@ to: <%= path %>/<%= componentName %>/<%= componentName %>.ts
 ---
 import Component from '@biotope/element';
 import template from './template';
-import * from './defines';
+import {<%= componentName %>Props, <%= componentName %>State, <%= componentName %>Methods} from './defines';
 
 
 class <%= componentName %> extends Component< <%= componentName %>Props, <%= componentName %>State > {
