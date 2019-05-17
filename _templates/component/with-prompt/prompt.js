@@ -15,7 +15,7 @@ const questions = [
       if (/^(.*?[A-Z]){2,}/.test(camelized)) {
         return true;
       }
-      return `${camelized} is not a valid component name you may want to try: X${camelized}`;
+      return `${camelized} is not a valid component name you may want to try: X${camelized}. For more information:  https://stackoverflow.com/q/22545621`;
     },
     message: 'Component name 🙏'
   },
