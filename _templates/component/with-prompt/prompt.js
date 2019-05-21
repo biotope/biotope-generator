@@ -4,10 +4,19 @@
 //
 // and for examples for prompts:
 // https://github.com/SBoudrias/Inquirer.js/tree/master/examples
+
+const { camelize, dasherize, underscore } = require('inflection');
 const questions = [
   {
     type: 'input',
     name: 'name',
+    validate: (val) => {
+      const camelized = camelize(val);
+      if (/^(.*?[A-Z]){2,}/.test(camelized)) {
+        return true;
+      }
+      return `${camelized} is not a valid component name you may want to try: X${camelized}. For more information:  https://stackoverflow.com/q/22545621`;
+    },
     message: 'Component name 🙏'
   },
   {
@@ -38,7 +47,6 @@ const questions = [
   }
 ];
 
-const { camelize, dasherize, underscore } = require('inflection');
 
 module.exports = {
   prompt: ({ inquirer }) => {
