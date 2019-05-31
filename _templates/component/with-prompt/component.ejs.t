@@ -16,7 +16,7 @@ class <%= componentName %> extends Component< <%= componentName %>Props, <%= com
     static componentName = '<%= h.inflection.transform(name, ['underscore', 'dasherize']) %>';
 
     render() {
-        return template(this.html, {});
+        return template(this.html, {}, this.createStyle);
     }
 }
 
