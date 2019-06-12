@@ -7,9 +7,9 @@ interface <%= componentName %>TemplateData {
 
 }
 
-export default (render: Function, data: <%= componentName %>TemplateData) => {
+export default (render: Function, data: <%= componentName %>TemplateData, createStyle: Function) => {
     return render`
-        <style>${styles.toString()}</style>
+        ${createStyle(styles)}
         <div>Fill me</div>
     `;
 }
