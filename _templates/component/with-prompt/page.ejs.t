@@ -14,5 +14,5 @@ description: A simple demo of <%= componentName %>
 --}}
 
 {{> layouts/<%= locals.layout %>
-	contentMain="<%= `components/${componentName}/scaffolding/demo` %>"
+	contentMain="<%= `${path.split('/').slice(1).join('/')}/${componentName}/scaffolding/demo` %>"
 }}
