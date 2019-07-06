@@ -32,7 +32,7 @@ class <%= componentName %> extends Component< <% if(generateParts.indexOf('Props
     }
 <% } %>
     render() {
-        return template(this.html<% if(generateParts.length) { %>, { <%= generateParts.map((part) => '...this.' + part.toLowerCase()).join(', ') %> }<% } %>);
+        return template(this.html<% if(generateParts.length) { %>, { <%= generateParts.map((part) => '...this.' + part.toLowerCase()).join(', ') %> }<% } %>, this.createStyle);
     }
 }
 

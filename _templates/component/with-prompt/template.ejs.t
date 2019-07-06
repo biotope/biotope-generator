@@ -6,9 +6,9 @@ import * as styles from './styles.scss';
 import { <%= generateParts.map((part) => componentName + part ).join(', '); %> } from './defines';
 <% } %>
 
-export default (render: Function<% if(generateParts.length) { %>, data: <%- generateParts.map((part) => componentName + part ).join(' & '); %> <% } %>) => {
+export default (render: Function<% if(generateParts.length) { %>, data: <%- generateParts.map((part) => componentName + part ).join(' & '); %> <% } %>, createStyle: Function) => {
     return render`
-        <style>${styles.toString()}</style>
+        ${createStyle(styles)}
         <div>Fill me</div>
     `;
 }
