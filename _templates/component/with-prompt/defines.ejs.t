@@ -4,33 +4,15 @@ to: <%= path %>/<%= componentName %>/defines.ts
 /**
  *  ## DEFINE ALL INTERFACES FOR <%= componentName %>
  **/
-
+<% generateParts.map((part) => { %>
 /**
- * Props
+ * <%= part %>
  */
- interface <%= componentName %>Props {
+ interface <%= componentName %><%= part %> {
 
  }
+<% }) %>
 
- /**
- * State
- */
-interface <%= componentName %>State {
-
-}
-
-/**
- * Methods
- */
-interface <%= componentName %>Methods {
-
-}
-
-/**
- *  Exports
- */
 export {
-    <%= componentName %>Props,
-    <%= componentName %>State,
-    <%= componentName %>Methods
+    <%= generateParts.map((part) => componentName + part).join(",\n\t") %>
 }

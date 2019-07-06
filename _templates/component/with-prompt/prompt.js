@@ -11,6 +11,13 @@ const questions = [
     message: 'Component name 🙏'
   },
   {
+    type: 'checkbox',
+    name: 'generateParts',
+    message: 'Which features your component will use?',
+    default: [],
+    choices: ['Props', 'State', 'Methods']
+  },
+  {
     type: 'input',
     name: 'path',
     message: 'Where to put it?',

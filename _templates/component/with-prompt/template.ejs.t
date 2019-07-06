@@ -2,9 +2,11 @@
 to: <%= path %>/<%= componentName %>/template.ts
 ---
 import * as styles from './styles.scss';
-import {<%= componentName %>Props, <%= componentName %>State, <%= componentName %>Methods} from './defines';
+<% if (generateParts.length) { %>
+import { <%= generateParts.map((part) => componentName + part ).join(', '); %> } from './defines';
+<% } %>
 
-export default (render: Function, data: <%= componentName %>Props & <%= componentName %>State & <%= componentName %>Methods) => {
+export default (render: Function<% if(generateParts.length) { %>, data: <%- generateParts.map((part) => componentName + part ).join(' & '); %> <% } %>) => {
     return render`
         <style>${styles.toString()}</style>
         <div>Fill me</div>
