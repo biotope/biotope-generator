@@ -22,7 +22,7 @@ const questions = [
   {
     type: 'checkbox',
     name: 'generateParts',
-    message: 'Which features your component will use?',
+    message: 'What should your component contain?',
     default: [],
     choices: ['Props', 'State', 'Methods']
   },
