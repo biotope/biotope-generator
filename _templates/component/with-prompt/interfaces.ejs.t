@@ -1,5 +1,5 @@
 ---
-to: <%= path %>/<%= componentName %>/defines.ts
+to: <%= path %>/<%= componentName %>/interfaces.ts
 ---
 /**
  *  ## DEFINE ALL INTERFACES FOR <%= componentName %>
@@ -12,6 +12,8 @@ to: <%= path %>/<%= componentName %>/defines.ts
 
  }
 <% }) %>
+
+export type <%= componentName %>Data = <%= generateParts.map((part) => part).join(' & ') %>;
 
 export {
     <%= generateParts.map((part) => componentName + part).join(",\n\t") %>
