@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "release": "np",
-    "prepublishOnly": "npm run clean && npm install",
-    "clean": "node_modules/.bin/rimraf node_modules",
-    "test": "echo \"No tests found\""
+    "prepublishOnly": "npm ci"
   },
   "dependencies": {
     "hygen": "^4.0.7",
