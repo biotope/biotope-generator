@@ -23,6 +23,6 @@
   },
   "devDependencies": {
     "np": "^5.2.1",
-    "rimraf": "^2.6.3"
+    "rimraf": "^3.0.0"
   }
 }
