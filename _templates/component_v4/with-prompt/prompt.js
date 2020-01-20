@@ -11,11 +11,11 @@ const questions = [
     type: 'input',
     name: 'name',
     validate: (val) => {
-      const camelized = camelize(val);
-      if (/^(.*?[A-Z]){2,}/.test(camelized)) {
+      const dasherized = dasherize(underscore(val));
+      if (/\D-\D/.test(dasherized)) {
         return true;
       }
-      return `${camelized} is not a valid component name you may want to try: X${camelized}. For more information:  https://stackoverflow.com/q/22545621`;
+      return `${dasherized} is not a valid component name you may want to try: x-${dasherized}. For more information:  https://stackoverflow.com/q/22545621`;
     },
     message: 'Component name 🙏'
   },

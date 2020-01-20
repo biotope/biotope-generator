@@ -1,12 +1,12 @@
 ---
-to: <%= path %>/<%= componentName %>/<%= componentName %>.ts
+to: <%= path %>/<%= tagName %>/<%= tagName %>.ts
 ---
 import Component, { HTMLFragment } from '@biotope/element';
 import { template } from './template';
 <% if (generateParts.length) { %>import { <%= generateParts.map((part) => componentName + part ).join(', '); %> } from './defines';<% } %>
 
 class <%= componentName %> extends Component< <% if(generateParts.indexOf('Props') !== -1) { %><%= componentName %>Props<% } else { %>null<% } %>, <% if(generateParts.indexOf('State') !== -1) { %><%= componentName %>State<% } else { %>null<% } %> > {
-  public static componentName = '<%= h.inflection.transform(name, ['underscore', 'dasherize']) %>';
+  public static componentName = '<%= tagName %>';
   public static attributes = [];
 <% if(generateParts.indexOf('Props') !== -1) { %>  
   protected readonly defaultProps: <%= componentName %>Props = {};
