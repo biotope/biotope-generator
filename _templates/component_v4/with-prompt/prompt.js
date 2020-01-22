@@ -11,13 +11,16 @@ const questions = [
     type: 'input',
     name: 'name',
     validate: (val) => {
+      if (/\D-\D/.test(val)) {
+        return `${val} does not seem to be valid PascalCase. Please provide a valid name.`;
+      }
       const dasherized = dasherize(underscore(val));
       if (/\D-\D/.test(dasherized)) {
         return true;
       }
-      return `${dasherized} is not a valid component name you may want to try: x-${dasherized}. For more information:  https://stackoverflow.com/q/22545621`;
+      return `${dasherized} is not a valid component name you may want to try: X${dasherized}. For more information:  https://stackoverflow.com/q/22545621`;
     },
-    message: 'Component name 🙏'
+    message: 'Component name (PascalCase) 🙏'
   },
   {
     type: 'checkbox',
