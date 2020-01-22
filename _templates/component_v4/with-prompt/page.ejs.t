@@ -1,5 +1,5 @@
 ---
-to: "<%= shouldCreatePage ? `${pagePath}/10components.${componentName}.hbs` : null %>"
+to: "<%= shouldCreatePage ? `${pagePath}/10components.${tagName}.hbs` : null %>"
 ---
 ---
 # These values are used for creating the index
@@ -14,5 +14,5 @@ description: A simple demo of <%= componentName %>
 --}}
 
 {{> layouts/<%= locals.layout %>
-	contentMain="<%= `${path.split('/').slice(1).join('/')}/${componentName}/scaffolding/${componentName}` %>"
+	contentMain="<%= `${path.split('/').slice(1).join('/')}/${tagName}/scaffolding/${tagName}` %>"
 }}

@@ -1,5 +1,5 @@
 ---
-to: <%= path %>/<%= componentName %>/template.ts
+to: <%= path %>/<%= tagName %>/template.ts
 ---
 import { html, createStyle, HTMLFragment } from '@biotope/element';
 import * as styles from './styles.scss';

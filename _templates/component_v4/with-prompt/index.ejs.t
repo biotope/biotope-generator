@@ -1,6 +1,6 @@
 ---
-to: <%= path || 'src/components' %>/<%= componentName %>/index.ts
+to: <%= path || 'src/components' %>/<%= tagName %>/index.ts
 ---
-import <%= componentName %> from './<%= componentName %>';
+import <%= componentName %> from './<%= tagName %>';
 
 <%= componentName %>.register();

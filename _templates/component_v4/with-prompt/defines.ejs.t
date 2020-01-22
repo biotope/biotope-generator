@@ -1,5 +1,5 @@
 ---
-to: <%= path %>/<%= componentName %>/defines.ts
+to: <%= path %>/<%= tagName %>/defines.ts
 ---
 /**
  *  ## DEFINE ALL INTERFACES FOR <%= componentName %>
