@@ -1,5 +1,5 @@
 ---
-to: "<%= multipleFiles ? `${path}/${tagName}/interfaces.ts` : null %>"
+to: "<%= multipleFiles && generateParts.length > 0 ? `${path}/${tagName}/interfaces.ts` : null %>"
 ---
 /**
  *  ## DEFINE ALL INTERFACES FOR <%= componentName %>

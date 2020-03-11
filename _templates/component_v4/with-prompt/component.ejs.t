@@ -9,7 +9,7 @@ class <%= componentName %> extends Component< <% if(generateParts.indexOf('Props
   public static componentName = '<%= tagName %>';
 <% if(generateParts.indexOf('Props') !== -1) { %>  
   public static attributes = [];
-  
+
   protected readonly defaultProps: <%= componentName %>Props = {};
 <% } %><% if(generateParts.indexOf('State') !== -1) { %>   
   protected readonly defaultState: <%= componentName %>State = {};
@@ -20,5 +20,7 @@ class <%= componentName %> extends Component< <% if(generateParts.indexOf('Props
     return template(<% if(generateParts.length) { %> { <%= generateParts.map((part) => '...this.' + part.toLowerCase()).join(', ') %> }<% } %>);
   }
 }
+
+<%= componentName %>.register();
 
 export default <%= componentName %>;
