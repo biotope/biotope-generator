@@ -1,5 +1,5 @@
 ---
-to: <%= path %>/<%= tagName %>/defines.ts
+to: "<%= multipleFiles ? `${path}/${tagName}/interfaces.ts` : null %>"
 ---
 /**
  *  ## DEFINE ALL INTERFACES FOR <%= componentName %>

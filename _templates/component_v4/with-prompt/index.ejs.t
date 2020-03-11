@@ -1,5 +1,5 @@
 ---
-to: <%= path || 'src/components' %>/<%= tagName %>/index.ts
+to: "<%= multipleFiles ? `${path}/${tagName}/index.ts` : null %>"
 ---
 import <%= componentName %> from './<%= tagName %>';
 

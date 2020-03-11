@@ -37,6 +37,12 @@ const questions = [
   },
   {
     type: 'confirm',
+    name: 'multipleFiles',
+    message: 'Should the component be split up in multiple files? (recommended for big/complex components',
+    default: false
+  },
+  {
+    type: 'confirm',
     name: 'shouldCreatePage',
     message: 'Should a page .hbs template be created?',
     default: false
