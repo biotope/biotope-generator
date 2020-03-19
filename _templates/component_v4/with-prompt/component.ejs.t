@@ -5,7 +5,7 @@ import Component, { HTMLFragment } from '@biotope/element';
 import { template } from './template';
 <% if (generateParts.length) { %>import { <%= generateParts.map((part) => componentName + part ).join(', '); %> } from './interfaces';<% } %>
 
-class <%= componentName %> extends Component< <% if(generateParts.indexOf('Props') !== -1) { %><%= componentName %>Props<% } else { %>null<% } %>, <% if(generateParts.indexOf('State') !== -1) { %><%= componentName %>State<% } else { %>null<% } %> > {
+export class <%= componentName %> extends Component< <% if(generateParts.indexOf('Props') !== -1) { %><%= componentName %>Props<% } else { %>null<% } %>, <% if(generateParts.indexOf('State') !== -1) { %><%= componentName %>State<% } else { %>null<% } %> > {
   public static componentName = '<%= tagName %>';
 <% if(generateParts.indexOf('Props') !== -1) { %>  
   public static attributes = [];
@@ -22,5 +22,3 @@ class <%= componentName %> extends Component< <% if(generateParts.indexOf('Props
 }
 
 <%= componentName %>.register();
-
-export default <%= componentName %>;
