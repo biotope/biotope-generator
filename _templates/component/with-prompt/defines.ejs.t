@@ -1,5 +1,5 @@
 ---
-to: "<%= script ? `${path}/${componentName}/defines.ts` : null %>"
+to: <%= path %>/<%= componentName %>/defines.ts
 ---
 /**
  *  ## DEFINE ALL INTERFACES FOR <%= componentName %>
