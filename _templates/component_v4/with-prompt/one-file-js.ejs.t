@@ -7,9 +7,7 @@ import * as styles from './<%= tagName %>.scss';
 export class <%= componentName %> extends Component {
   constructor(){
     super();
-  <% if(generateParts.indexOf('Props') !== -1) { %>  
-    this.attributes = [];
-    
+  <% if(generateParts.indexOf('Props') !== -1) { %>      
     this.defaultProps = {};
   <% } %><% if(generateParts.indexOf('State') !== -1) { %>   
     this.defaultState = {};

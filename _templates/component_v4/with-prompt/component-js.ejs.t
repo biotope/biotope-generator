@@ -7,11 +7,7 @@ import { template } from './template';
 export class <%= componentName %> extends Component {
    constructor(){
     super();
-
-    this.componentName = '<%= tagName %>';
   <% if(generateParts.indexOf('Props') !== -1) { %>  
-    this.attributes = [];
-
     this.defaultProps = {};
   <% } %><% if(generateParts.indexOf('State') !== -1) { %>   
     this.defaultState = {};
@@ -24,4 +20,6 @@ export class <%= componentName %> extends Component {
   }
 }
 
+<%= componentName %>.componentName = '<%= tagName %>';
+<%= componentName %>.attributes = [];
 <%= componentName %>.register();
