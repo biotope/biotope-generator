@@ -1,5 +1,5 @@
 ---
-to: "<%= !multipleFiles ? `${path}/${tagName}/${tagName}.ts` : null %>"
+to: "<%= script && !multipleFiles ? `${path}/${tagName}/${tagName}.ts` : null %>"
 ---
 import Component, { HTMLFragment, html, createStyle } from '@biotope/element';
 import * as styles from './<%= tagName %>.scss';
