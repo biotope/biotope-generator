@@ -9,7 +9,7 @@ const { camelize, dasherize, underscore } = require('inflection');
 const questions = [
   {
     type: 'confirm',
-    name: 'script',
+    name: 'useTypescript',
     message: 'Do you want to use TypeScript? (recommended)',
     default: true
   },

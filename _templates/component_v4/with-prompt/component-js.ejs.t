@@ -1,5 +1,5 @@
 ---
-to: "<%= !script && multipleFiles ? `${path}/${tagName}/${tagName}.js` : null %>"
+to: "<%= !useTypescript && multipleFiles ? `${path}/${tagName}/${tagName}.js` : null %>"
 ---
 import Component from '@biotope/element';
 import { template } from './template';
