@@ -8,6 +8,12 @@
 const { camelize, dasherize, underscore } = require('inflection');
 const questions = [
   {
+    type: 'confirm',
+    name: 'useTypescript',
+    message: 'Do you want to use TypeScript? (recommended)',
+    default: true
+  },
+  {
     type: 'input',
     name: 'name',
     validate: (val) => {
@@ -38,7 +44,7 @@ const questions = [
   {
     type: 'confirm',
     name: 'multipleFiles',
-    message: 'Should the component be split up in multiple files? (recommended for big/complex components',
+    message: 'Should the component be split up in multiple files? (recommended for big/complex components)',
     default: false
   },
   {
